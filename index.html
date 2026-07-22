@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onda do Sabor</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <h1>🌊 Onda do Sabor</h1>
+        <p>Sabor que te leva.</p>
+    </div>
+
+    <nav>
+        <a href="#">Início</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#bebidas">Bebidas</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="overlay">
+        <h2>Bem-vindo!</h2>
+        <p id="mensagem-dia"></p>
+        <a href="#cardapio" class="botao">Ver Cardápio</a>
+    </div>
+</section>
+
+<section id="cardapio">
+    <h2 class="titulo">Cardápio da Semana</h2>
+
+    <div class="dias">
+        <button id="btn-segunda" onclick="mostrarDia('segunda')">Seg</button>
+        <button id="btn-terca" onclick="mostrarDia('terca')">Ter</button>
+        <button id="btn-quarta" onclick="mostrarDia('quarta')">Qua</button>
+        <button id="btn-quinta" onclick="mostrarDia('quinta')">Qui</button>
+        <button id="btn-sexta" onclick="mostrarDia('sexta')">Sex</button>
+    </div>
+
+    <!-- SEGUNDA -->
+    <div id="segunda" class="dia">
+        <div class="produto">
+            <img src="img/batata.jpg" alt="Batata com Nuggets">
+            <h3>Batata + Nuggets</h3>
+            <p>Batata frita crocante com nuggets.</p>
+            <span>R$ 10,00</span>
+            <button class="btn-add">Adicionar</button>
+        </div>
+
+        <div class="produto">
+            <img src="img/folhado.jpg" alt="Folhado">
+            <h3>Folhado</h3>
+            <p>Presunto e queijo.</p>
+            <span>R$ 7,00</span>
+            <button class="btn-add">Adicionar</button>
+        </div>
+
+        <div class="produto">
+            <img src="img/alfajor.jpg" alt="Alfajor">
+            <h3>Alfajor</h3>
+            <span>R$ 5,00</span>
+            <button class="btn-add">Adicionar</button>
+        </div>
+    </div>
+
+    <!-- TERÇA -->
+    <div id="terca" class="dia">
+        <div class="produto">
+            <img src="img/pizza.jpg" alt="Mini Pizza">
+            <h3>Mini Pizza</h3>
+            <p>Calabresa ou Frango com Catupiry.</p>
+            <span>R$ 5,00</span>
+            <button class="btn-add">Adicionar</button>
+        </div>
+    </div>
+
+    <!-- QUARTA -->
+    <div id="quarta" class="dia">
+        <div class="produto">
+            <img src="img/bolo.jpg" alt="Bolo de Chocolate">
+            <h3>Bolo de Chocolate</h3>
+            <span>R$ 6,00</span>
+            <button class="btn-add">Adicionar</button>
+        </div>
+
+        <div class="produto">
+            <img src="img/chocolate.jpg" alt="Chocolate Quente">
+            <h3>Chocolate Quente</h3>
+            <span>R$ 5,50</span>
+            <button class="btn-add">Adicionar</button>
+        </div>
+    </div>
+
+    <!-- QUINTA -->
+    <div id="quinta" class="dia">
+        <div class="produto">
+            <img src="img/pastel.jpg" alt="Pastel de Carne">
+            <h3>Pastel de Carne</h3>
+            <span>R$ 7,50</span>
+            <button class="btn-add">Adicionar</button>
+        </div>
+
+        <div class="produto">
+            <img src="img/pastel-queijo.jpg" alt="Pastel Carne e Queijo">
+            <h3>Pastel Carne + Queijo</h3>
+            <span>R$ 8,00</span>
+            <button class="btn-add">Adicionar</button>
+        </div>
+
+        <div class="produto">
+            <img src="img/pastel-presunto.jpg" alt="Pastel Presunto e Queijo">
+            <h3>Pastel Presunto + Queijo</h3>
+            <span>R$ 7,00</span>
+            <button class="btn-add">Adicionar</button>
+        </div>
+
+        <div class="produto">
+            <img src="img/alfajor.jpg" alt="Alfajor">
+            <h3>Alfajor</h3>
+            <span>R$ 5,00</span>
+            <button class="btn-add">Adicionar</button>
+        </div>
+    </div>
+
+    <!-- SEXTA (CORRIGIDA E PREENCHIDA) -->
+    <div id="sexta" class="dia">
+        <div class="produto">
+            <img src="img/pastel.jpg" alt="Pastel de Carne">
+            <h3>Pastel de Carne</h3>
+            <span>R$ 7,50</span>
+            <button class="btn-add">Adicionar</button>
+        </div>
+
+        <div class="produto">
+            <img src="img/pastel-queijo.jpg" alt="Pastel Carne e Queijo">
+            <h3>Pastel Carne + Queijo</h3>
+            <span>R$ 8,00</span>
+            <button class="btn-add">Adicionar</button>
+        </div>
+
+        <div class="produto">
+            <img src="img/pastel-presunto.jpg" alt="Pastel Presunto e Queijo">
+            <h3>Pastel Presunto + Queijo</h3>
+            <span>R$ 7,00</span>
+            <button class="btn-add">Adicionar</button>
+        </div>
+
+        <div class="produto">
+            <img src="img/alfajor.jpg" alt="Alfajor">
+            <h3>Alfajor</h3>
+            <span>R$ 5,00</span>
+            <button class="btn-add">Adicionar</button>
+        </div>
+    </div>
+
+</section>
+
+<section id="bebidas">
+    <h2 class="titulo">Bebidas disponíveis todos os dias</h2>
+
+    <div class="bebidas-grid">
+        <div class="produto">
+            <img src="img/pitchula.jpg" alt="Pitchulinha">
+            <h3>Pitchulinha</h3>
+            <span>R$ 3,00</span>
+            <button class="btn-add">Adicionar</button>
+        </div>
+
+        <div class="produto">
+            <img src="img/coca.jpg" alt="Coca-Cola">
+            <h3>Coca-Cola</h3>
+            <span>R$ 5,00</span>
+            <button class="btn-add">Adicionar</button>
+        </div>
+
+        <div class="produto">
+            <img src="img/sprite.jpg" alt="Sprite">
+            <h3>Sprite</h3>
+            <span>R$ 5,00</span>
+            <button class="btn-add">Adicionar</button>
+        </div>
+    </div>
+</section>
+
+<footer id="contato">
+    <h2>Onda do Sabor</h2>
+    <p>Feito com amor para você ❤️</p>
+    
+    <p class="insta-link">
+        <a href="https://www.instagram.com/ondadosabor_tai1" target="_blank">
+            <i class="fa-brands fa-instagram"></i> @ondadosabor_tai1
+        </a>
+    </p>
+
+    <p class="creditos">Projeto Escolar • RaulTech</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
