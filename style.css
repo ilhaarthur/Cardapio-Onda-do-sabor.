@@ -1,0 +1,330 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f8fb;
+    color:#222;
+    overflow-x:hidden;
+}
+
+/* HEADER */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(10px);
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    z-index:999;
+}
+
+.logo h1{
+    color:#0099cc;
+    font-size:30px;
+    display:inline-block;
+    transition: transform 0.3s ease;
+}
+
+.logo h1:hover {
+    transform: scale(1.03);
+}
+
+.logo p{
+    color:#777;
+    font-size:14px;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    transition:.3s;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background-color: #00bcd4;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+nav a:hover{
+    color:#00bcd4;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO COM ANIMAÇÃO */
+.hero{
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("img/praia.jpg") center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.overlay{
+    color:white;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.overlay h2{
+    font-size:58px;
+    margin-bottom:15px;
+    text-shadow: 2px 4px 10px rgba(0,0,0,0.3);
+}
+
+.overlay p{
+    font-size:22px;
+    margin-bottom:30px;
+    text-shadow: 1px 2px 6px rgba(0,0,0,0.3);
+}
+
+.botao{
+    background:#ff9800;
+    color:white;
+    padding:15px 35px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
+    animation: pulso 2s infinite;
+    transition: .3s;
+}
+
+.botao:hover{
+    background:#ffb300;
+    transform:scale(1.08) translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 179, 0, 0.6);
+}
+
+/* TITULOS */
+.titulo{
+    text-align:center;
+    font-size:38px;
+    color:#0099cc;
+    margin-top:90px;
+    margin-bottom:35px;
+}
+
+/* BOTÕES DOS DIAS */
+.dias{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-bottom:40px;
+}
+
+.dias button{
+    border:2px solid #0099cc;
+    background:white;
+    color:#0099cc;
+    padding:12px 28px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight: 600;
+    transition:.3s ease;
+}
+
+.dias button:hover, .dias button.ativo{
+    background:#0099cc;
+    color:white;
+    transform:translateY(-4px);
+    box-shadow:0 6px 15px rgba(0,153,204,0.3);
+}
+
+/* PRODUTOS E CARDS */
+.dia, .bebidas-grid{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    padding:20px;
+}
+
+.produto{
+    width:300px;
+    background:white;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: surgirCard 0.5s ease forwards;
+}
+
+.produto:hover{
+    transform:translateY(-12px) scale(1.02);
+    box-shadow:0 18px 35px rgba(0,0,0,.15);
+}
+
+.produto img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    transition: transform 0.5s ease;
+}
+
+.produto:hover img {
+    transform: scale(1.08);
+}
+
+.produto h3{
+    padding:18px 20px 8px;
+    color:#0099cc;
+}
+
+.produto p{
+    padding:0 20px;
+    color:#666;
+    font-size: 14px;
+}
+
+.produto span{
+    display:block;
+    padding:15px 20px;
+    font-size:22px;
+    color:#ff9800;
+    font-weight:bold;
+}
+
+.produto button{
+    width:90%;
+    margin:0 auto 20px;
+    display:block;
+    border:none;
+    background:#00b894;
+    color:white;
+    padding:13px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight: 600;
+    transition:.3s;
+}
+
+.produto button:hover{
+    background:#00a884;
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0, 184, 148, 0.3);
+}
+
+/* FOOTER & INSTAGRAM */
+footer{
+    margin-top:80px;
+    background:#0099cc;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+}
+
+footer h2{
+    margin-bottom:10px;
+}
+
+footer p{
+    margin:8px 0;
+}
+
+.insta-link a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.15);
+    transition: .3s;
+}
+
+.insta-link a:hover {
+    background: rgba(255,255,255,0.3);
+    transform: scale(1.08);
+}
+
+/* KEYFRAMES DE ANIMAÇÃO */
+@keyframes pulso {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes surgirCard {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* RESPONSIVO CELULAR */
+@media(max-width:900px){
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .overlay h2{
+        font-size:42px;
+    }
+
+    .overlay p{
+        font-size:18px;
+    }
+
+    .produto{
+        width:90%;
+    }
+
+    .titulo{
+        font-size:30px;
+    }
+}
